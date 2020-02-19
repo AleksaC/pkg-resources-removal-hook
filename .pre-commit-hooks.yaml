@@ -1,0 +1,7 @@
+- id: pkg-resources-removal
+  name: pkg-resources-removal
+  description: "git pre-commit hook for removing pkg-resources from requirements.txt"
+  entry: remove-pkg-resources
+  language: python
+  require_serial: true
+  types: [text]
