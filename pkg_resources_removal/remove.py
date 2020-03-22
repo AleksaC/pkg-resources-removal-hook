@@ -56,9 +56,10 @@ if __name__ == "__main__":
     argv = None
 
     if len(sys.argv) == 1:
-        files = subprocess.run(
+        proc = subprocess.Popen(
             ["git", "diff", "--cached", "--name-only"], stdout=subprocess.PIPE
         )
-        argv = files.stdout.decode().strip().split("\n")
+        stdout, _ = proc.communicate()
+        argv = stdout.decode().strip().split("\n")
 
     sys.exit(main(argv))
