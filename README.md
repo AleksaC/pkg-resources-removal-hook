@@ -16,8 +16,8 @@ it to `.git/hooks/`
 Add the following lines to `.pre-commit-config.yaml`
 ```yaml
 repos:
--   repo: https://github.com/AleksaC/pkg-resources-removal-hook
-    rev: stable
+  - repo: https://github.com/AleksaC/pkg-resources-removal-hook
+    rev: 5727d8f
     hooks:
-    - id: pkg-resources-removal
+      - id: pkg-resources-removal
 ```
