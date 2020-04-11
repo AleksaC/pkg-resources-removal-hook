@@ -4,4 +4,4 @@
   entry: remove-pkg-resources
   language: python
   require_serial: true
-  types: [text]
+  files: ^(.+/)?requirements(-.*)?\.txt$
