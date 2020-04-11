@@ -11,13 +11,18 @@ committing the changes.
 
 ## Usage
 You can use the hook by renaming the `remove.py` file to `pre-commit` and moving
-it to `.git/hooks/`
+it to `.git/hooks/`. Assuming you are in the root of your project and have 
+already initialized a git repo you can use the following command:
+```shell script
+wget https://raw.githubusercontent.com/AleksaC/pkg-resources-removal-hook/master/pkg_resources_removal/remove.py -O .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+``` 
 ### With [pre-commit](https://pre-commit.com/)
 Add the following lines to `.pre-commit-config.yaml`
 ```yaml
 repos:
   - repo: https://github.com/AleksaC/pkg-resources-removal-hook
-    rev: 5727d8f
+    rev: master
     hooks:
       - id: pkg-resources-removal
+        args: [--auto-add]
 ```
