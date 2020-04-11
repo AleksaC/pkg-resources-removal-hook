@@ -1,6 +1,11 @@
 # pkg-resources-removal-hook
 git pre-commit hook for removing pkg-resources from requirements.txt
 
+**Update:** `requirements-txt-fixer` from [`pre-commit-hooks`](https://github.com/pre-commit/pre-commit-hooks)
+has the same functionality as this hook along with sorting the requirements. 
+So the only reason for using this is if you just want pkg-resources to be 
+removed without sorting the requirements file. 
+
 ## About
 In some cases when using `virtualenv` on ubuntu pip freeze may return 
 `pkg-resources` as a result of bad metadata provided by ubuntu to `pip`. If we 
